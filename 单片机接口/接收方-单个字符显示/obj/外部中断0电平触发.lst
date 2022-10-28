@@ -1,0 +1,59 @@
+C51 COMPILER V7.06   外部謃__0_缙絖_                                                     03/25/2022 22:01:34 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE 外部謃__0_缙絖_
+OBJECT MODULE PLACED IN .\obj\外部中断0电平触发.obj
+COMPILER INVOKED BY: G:\KEIL C51\C51\BIN\C51.EXE 外部中断0电平触发.c BROWSE DEBUG OBJECTEXTEND PRINT(.\obj\外部中断0电平
+                    -触发.lst) OBJECT(.\obj\外部中断0电平触发.obj)
+
+stmt level    source
+
+   1          #include <reg51.h>
+   2          #include <delay.h>
+   3          bit flag=0;
+   4          sbit led1=P1^1;  //huan ying
+   5          sbit led2=P1^6;  //zai jian       
+   6          sbit key1=P3^2;
+   7          sbit key2=P3^3;
+   8          void main()
+   9          { // int0 int1 
+  10   1        IT0=1; EX0=1; EA=1;
+  11   1        IT1=1; EX1=1; 
+  12   1        while(1);
+  13   1      }
+  14          void ex0() interrupt 0    //outside door
+  15          { 
+  16   1        int i;
+  17   1        //if(key1==0)
+  18   1        {  
+  19   2           for(i=0;i<20;i++)  
+  20   2           {led1=!led1;DelayMs(100);}//huan ying
+  21   2           for(i=0;i<50;i++)  //延时10s
+  22   2           {DelayMs(100);}
+  23   2        } 
+  24   1      }
+  25          void ex1() interrupt 2    //inside door 
+  26          { 
+  27   1        int j;
+  28   1        //if(key2==0)
+  29   1        {
+  30   2           for(j=0;j<20;j++) 
+  31   2           {led2=!led2;DelayMs(100);}//zai jian
+  32   2           for(j=0;j<50;j++)  //延时10s
+  33   2           {DelayMs(100);}
+  34   2        }
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    248    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

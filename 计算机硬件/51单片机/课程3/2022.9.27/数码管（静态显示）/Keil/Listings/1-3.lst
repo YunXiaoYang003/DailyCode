@@ -1,0 +1,73 @@
+C51 COMPILER V9.60.0.0   1_3                                                               09/27/2022 21:50:41 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE 1_3
+OBJECT MODULE PLACED IN .\Objects\1-3.obj
+COMPILER INVOKED BY: D:\soft\Keil5\C51\BIN\C51.EXE 1-3.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\1-
+                    -3.lst) OBJECT(.\Objects\1-3.obj)
+
+line level    source
+
+   1          #include"reg51.h"//reg寄存器，51---51单片机
+   2          
+   3          unsigned char s[]={0x3f,0x06,0x58,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};//共阴极0至9
+   4          
+   5          void delay(unsigned int n)
+   6          {
+   7   1              unsigned int i=0,j=0;
+   8   1              for(i=0;i<n;i++)
+   9   1              {
+  10   2                      for(j=0;j<120;j++)
+  11   2                      ;
+  12   2              }
+  13   1      }
+  14          
+  15          void seg()
+  16          {
+  17   1              unsigned int i=0;
+  18   1              for(i=0;i<10;i++)
+  19   1              {
+  20   2                      P2=~s[i];
+  21   2                      delay(1000);//1000毫秒的延迟
+  22   2                      //P2=0x3F;//0001 1111
+  23   2              }
+  24   1              
+  25   1      }
+  26          
+  27          
+  28          //共阴极
+  29          //void seg()
+  30          //{
+  31          //      unsigned int i=0;
+  32          //      for(i=0;i<10;i++)
+  33          //      {
+  34          //              P2=s[i];
+  35          //              delay(1000);//1000毫秒的延迟
+  36          //              //P2=0x3F;//0001 1111
+  37          //      }
+  38          //      
+  39          //}
+  40          
+  41          void main()
+  42          {
+  43   1              while(1)
+  44   1              {
+  45   2                      seg();
+  46   2              }
+  47   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     69    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.60.0.0   1_3                                                               09/27/2022 21:50:41 PAGE 2   
+
+   DATA SIZE        =     10    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

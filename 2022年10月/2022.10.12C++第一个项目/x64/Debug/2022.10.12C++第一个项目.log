@@ -1,0 +1,5 @@
+﻿  test.cpp
+E:\梦想杂货铺\编程\gitee\Coding-every-day\2022年10月\2022.10.12C++第一个项目\test.cpp(29,5): error C2365: “rand”: 重定义；以前的定义是“函数”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(352): message : 参见“rand”的声明
+E:\梦想杂货铺\编程\gitee\Coding-every-day\2022年10月\2022.10.12C++第一个项目\test.cpp(33,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int (__cdecl *)(void)”
+E:\梦想杂货铺\编程\gitee\Coding-every-day\2022年10月\2022.10.12C++第一个项目\test.cpp(33,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int (__cdecl *)(void)" 的参数 1 冲突

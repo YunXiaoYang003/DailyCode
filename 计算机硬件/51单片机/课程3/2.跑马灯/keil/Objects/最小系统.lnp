@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\最小系统" 
+PRINT(".\Listings\最小系统.m51")

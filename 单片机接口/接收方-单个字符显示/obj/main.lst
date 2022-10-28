@@ -1,0 +1,58 @@
+C51 COMPILER V7.06   MAIN                                                                  05/10/2022 14:51:43 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\obj\main.obj
+COMPILER INVOKED BY: G:\KEIL C51\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND PRINT(.\obj\main.lst) OBJECT(.\obj\mai
+                    -n.obj)
+
+stmt level    source
+
+   1                #include <reg52.h>
+   2                #include <1602.h>
+   3                int i=0;
+   4                //发送可以不用中断，接收一般用中断
+   5                void uart_init()
+   6                { SCON=0x50;   //串口方式1
+   7   1              TMOD=0X20;  TH1=0x1D; TL1=0x1D;  TR1=1; //9600BPS
+   8   1              ES=1; EA=1;  //串口中断
+   9   1            }
+  10               main()
+  11               { //串口初始化
+  12   1             uart_init();
+  13   1             LCD_Init(); // LCD初始化
+  14   1             while(1);   //等待接收数据，再把数据显示到lcd       
+  15   1             }
+  16               void serial() interrupt 4
+  17               {  
+  18   1                char rxdata[4];        
+  19   1                if(RI=1)
+*** WARNING C276 IN LINE 19 OF MAIN.C: constant in condition expression
+  20   1                { 
+  21   2                  
+  22   2                  rxdata[i]=SBUF;
+  23   2                  LCD_Write_Char(i,0,rxdata[i]);
+  24   2                  i++;  
+  25   2                  RI=0; 
+  26   2                }  //接收一个字符显示一个字符
+  27   1                if(i==4)   
+  28   1                {i=0;}      
+  29   1           }
+  30          
+  31          
+  32               
+  33               
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    126    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
