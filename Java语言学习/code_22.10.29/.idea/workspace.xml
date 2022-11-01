@@ -44,7 +44,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="应用程序.ArrayListDemo5">
+  <component name="RunManager" selected="应用程序.ArrayListDemo1">
     <configuration name="ArrayListDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="YunXiaoYi.ArrayListDemo.ArrayListDemo1" />
       <module name="project" />
@@ -110,26 +110,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.ArrayListDemo1" />
         <item itemvalue="应用程序.ArrayListDemo5" />
         <item itemvalue="应用程序.ArrayListDemo4" />
         <item itemvalue="应用程序.ArrayListDemo3" />
         <item itemvalue="应用程序.ArrayListDemo2" />
-        <item itemvalue="应用程序.ArrayListDemo1" />
       </list>
     </recent_temporary>
   </component>

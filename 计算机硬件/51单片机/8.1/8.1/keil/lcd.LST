@@ -1,0 +1,12 @@
+C51 COMPILER V7.06   LCD                                                                   10/27/2022 15:26:31 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN lcd.OBJ
+COMPILER INVOKED BY: G:\KEIL C51\C51\BIN\C51.EXE lcd.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+*** ERROR C318 OF lcd.c: can't open file 'lcd.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

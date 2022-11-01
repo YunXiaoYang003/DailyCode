@@ -1,0 +1,6 @@
+"18b20.obj",
+"main.obj",
+"1602.obj",
+"uart.obj",
+"delay.obj" 
+TO "lcd" 

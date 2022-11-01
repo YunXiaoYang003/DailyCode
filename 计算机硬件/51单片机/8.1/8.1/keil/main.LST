@@ -1,0 +1,73 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              11/01/2022 09:12:17 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\soft\Keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include <delay.h>
+   3          #include <18b20.h>
+   4          #include <1602.h>
+   5          
+   6          
+   7          void main()
+   8          { unsigned int temp,temp_; 
+   9   1        float t;
+  10   1        int i; 
+  11   1        LCD_Init(); 
+  12   1        while(1)
+  13   1        {
+  14   2           temp=ReadTemperature();  //采集一次温度值
+  15   2               while(temp>0x00)
+  16   2               {
+  17   3                       int temp_=temp/16;
+  18   3               }
+  19   2               temp_*=16;
+  20   2               if(temp_==0x0F)
+  21   2               {               
+  22   3            t=(~temp+1)*0.0625; //-20.0625
+  23   3                //t=temp*0.0625; //20.0625
+  24   3                LCD_Write_Char(0,0,'-');
+  25   3            LCD_Write_Char(1,0,t/10+'0'); //shiwei
+  26   3                LCD_Write_Char(2,0,(int)t%10+'0');
+  27   3                LCD_Write_Char(3,0,'.');
+  28   3                LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
+  29   3            LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
+  30   3                LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
+  31   3                LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
+  32   3               }
+  33   2               if(temp==0x00)
+  34   2               {
+  35   3                t=temp*0.0625; //20.0625
+  36   3                LCD_Write_Char(0,0,'+');
+  37   3            LCD_Write_Char(1,0,t/10+'0'); //shiwei
+  38   3                LCD_Write_Char(2,0,(int)t%10+'0');
+  39   3                LCD_Write_Char(3,0,'.');
+  40   3                LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
+  41   3            LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
+  42   3                LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
+  43   3                LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
+  44   3               }
+  45   2           for(i=0;i<100;i++)
+  46   2           {DelayMs(100);}//延时10s=100ms*100
+  47   2        }
+  48   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    675    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.60.0.0   MAIN                                                              11/01/2022 09:12:17 PAGE 2   
+
+   DATA SIZE        =   ----      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

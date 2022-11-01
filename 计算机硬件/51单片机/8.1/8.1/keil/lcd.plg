@@ -1,0 +1,166 @@
+<html>
+<body>
+<pre>
+<h1>礦ision2 Build Log</h1>
+<h2>Project:</h2>
+D:\2022-2023-1\嵌入式系统应用\8.1\keil\lcd.uv2
+Project File Date:  10/21/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling lcd.c...
+G:\KEIL C51\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+G:\KEIL C51\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+G:\KEIL C51\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+G:\KEIL C51\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+G:\KEIL C51\C51\INC\REG52.H(19): error C231: 'B': redefinition
+G:\KEIL C51\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+G:\KEIL C51\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+G:\KEIL C51\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+G:\KEIL C51\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+G:\KEIL C51\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+G:\KEIL C51\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+G:\KEIL C51\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+G:\KEIL C51\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+G:\KEIL C51\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+G:\KEIL C51\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+G:\KEIL C51\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+G:\KEIL C51\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+G:\KEIL C51\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+G:\KEIL C51\C51\INC\REG52.H(51): error C231: 'P': redefinition
+G:\KEIL C51\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+G:\KEIL C51\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+G:\KEIL C51\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+G:\KEIL C51\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+G:\KEIL C51\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+G:\KEIL C51\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+G:\KEIL C51\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+G:\KEIL C51\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+G:\KEIL C51\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+G:\KEIL C51\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+G:\KEIL C51\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+G:\KEIL C51\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+G:\KEIL C51\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+G:\KEIL C51\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+G:\KEIL C51\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+compiling delay.c...
+compiling 18b20.c...
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+compiling delay.c...
+compiling 18b20.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTEMPERATURE?18B20
+Program Size: data=14.1 xdata=0 code=223
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+compiling delay.c...
+compiling 18b20.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTEMPERATURE?18B20
+Program Size: data=14.1 xdata=0 code=223
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+compiling delay.c...
+compiling 18b20.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTEMPERATURE?18B20
+Program Size: data=14.1 xdata=0 code=223
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+compiling delay.c...
+compiling 18b20.c...
+linking...
+Program Size: data=16.1 xdata=0 code=260
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+an't open file 'lcd.c'
+(0): error C318: 
+compiling delay.c...
+compiling 18b20.c...
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+an't open file 'lcd.c'
+(0): error C318: 
+compiling delay.c...
+compiling 18b20.c...
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+an't open file 'lcd.c'
+(0): error C318: 
+compiling delay.c...
+compiling 18b20.c...
+compiling main.c...
+MAIN.C(8): warning C206: 'LCD_Init': missing function-prototype
+MAIN.C(13): warning C206: 'LCD_Write_Char': missing function-prototype
+MAIN.C(13): error C267: 'LCD_Write_Char': requires ANSI-style prototype
+compiling 1602.c...
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+an't open file 'lcd.c'
+(0): error C318: 
+compiling delay.c...
+compiling 18b20.c...
+compiling main.c...
+compiling 1602.c...
+Target not created
+Build target 'Target 1'
+compiling delay.c...
+compiling 18b20.c...
+compiling main.c...
+compiling 1602.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD_CHECK_BUSY?1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD_CLEAR?1602
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_WRITE_STRING?1602
+Program Size: data=22.1 xdata=0 code=1422
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
