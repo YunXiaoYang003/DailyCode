@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f640d23-9293-48b7-b4e2-8b0d00212f0c" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/YunXiaoYi/ArrayListDemo/ArrayListDemo1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +136,7 @@
       <updated>1667005520165</updated>
       <workItem from="1667005521986" duration="710000" />
       <workItem from="1667006379445" duration="10367000" />
+      <workItem from="1667270712949" duration="709000" />
     </task>
     <servers />
   </component>
