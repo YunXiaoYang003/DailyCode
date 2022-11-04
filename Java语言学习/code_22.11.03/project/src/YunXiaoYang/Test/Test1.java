@@ -13,10 +13,10 @@ public class Test1 {
     {
         try {
             // 1、创建一个字节输入流管道与原视频接通
-           InputStream is=new FileInputStream("project\\src\\YunXiaoYangcode_22.11.3\\out\\production\\project\\YunXiaoYang\\out4.txt");
+           InputStream is=new FileInputStream("E:\\code\\Github\\DailyCode\\Java语言学习\\code_22.11.03\\project\\src\\YunXiaoYang\\out04.txt");
 
             // 2、创建一个字节输出流管道与目标文件接通
-            OutputStream os=new FileOutputStream("project\\src\\YunXiaoYangcode_22.11.3\\out\\production\\project\\YunXiaoYang\\out5.txt");
+           OutputStream os=new FileOutputStream("E:\\code\\Github\\DailyCode\\Java语言学习\\code_22.11.03\\project\\src\\YunXiaoYang\\out05.txt");
 
             // 3、定义一个字节数组转移数据
             byte[] bytes=new byte[1024];
