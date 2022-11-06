@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   MAIN                                                              11/01/2022 09:12:17 PAGE 1   
+C51 COMPILER V9.60.0.0   MAIN                                                              11/06/2022 14:05:33 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
@@ -21,53 +21,45 @@ line level    source
   12   1        while(1)
   13   1        {
   14   2           temp=ReadTemperature();  //采集一次温度值
-  15   2               while(temp>0x00)
-  16   2               {
-  17   3                       int temp_=temp/16;
-  18   3               }
-  19   2               temp_*=16;
-  20   2               if(temp_==0x0F)
-  21   2               {               
-  22   3            t=(~temp+1)*0.0625; //-20.0625
-  23   3                //t=temp*0.0625; //20.0625
-  24   3                LCD_Write_Char(0,0,'-');
-  25   3            LCD_Write_Char(1,0,t/10+'0'); //shiwei
-  26   3                LCD_Write_Char(2,0,(int)t%10+'0');
-  27   3                LCD_Write_Char(3,0,'.');
-  28   3                LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
-  29   3            LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
-  30   3                LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
-  31   3                LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
-  32   3               }
-  33   2               if(temp==0x00)
-  34   2               {
-  35   3                t=temp*0.0625; //20.0625
-  36   3                LCD_Write_Char(0,0,'+');
-  37   3            LCD_Write_Char(1,0,t/10+'0'); //shiwei
-  38   3                LCD_Write_Char(2,0,(int)t%10+'0');
-  39   3                LCD_Write_Char(3,0,'.');
-  40   3                LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
-  41   3            LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
-  42   3                LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
-  43   3                LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
-  44   3               }
-  45   2           for(i=0;i<100;i++)
-  46   2           {DelayMs(100);}//延时10s=100ms*100
-  47   2        }
-  48   1       }
+  15   2           // t=(~temp+1)*0.0625; //-20.0625
+  16   2                //t=temp*0.0625; //20.0625
+  17   2               // LCD_Write_Char(0,0,'-');
+  18   2           // LCD_Write_Char(1,0,t/10+'0'); //shiwei
+  19   2               // LCD_Write_Char(2,0,(int)t%10+'0');
+  20   2               // LCD_Write_Char(3,0,'.');
+  21   2               // LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
+  22   2           // LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
+  23   2               // LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
+  24   2               // LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
+  25   2      
+  26   2      //       if(temp==0x00)
+  27   2              //{
+  28   2                t=temp*0.0625; //20.0625
+  29   2                LCD_Write_Char(0,0,'+');
+  30   2            LCD_Write_Char(1,0,t/10+'0'); //shiwei
+  31   2                LCD_Write_Char(2,0,(int)t%10+'0');
+  32   2                LCD_Write_Char(3,0,'.');
+  33   2                LCD_Write_Char(4,0,(int)(t*10)%10+'0');//'0'为了显示
+  34   2            LCD_Write_Char(5,0,(long int)(t*100)%10+'0');//'0'为了显示
+  35   2                LCD_Write_Char(6,0,(long)(t*1000)%10+'0');//'0'为了显示
+  36   2                LCD_Write_Char(7,0,(long)(t*10000)%10+'0');//'0'为了显示
+  37   2               //}
+  38   2           for(i=0;i<100;i++)
+  39   2           {DelayMs(100);}//延时10s=100ms*100
+  40   2        }
+  41   1       }
+*** WARNING C280 IN LINE 8 OF main.c: 'temp_': unreferenced local variable
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    675    ----
+   CODE SIZE        =    313    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-C51 COMPILER V9.60.0.0   MAIN                                                              11/01/2022 09:12:17 PAGE 2   
-
-   DATA SIZE        =   ----      12
+   DATA SIZE        =   ----       8
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

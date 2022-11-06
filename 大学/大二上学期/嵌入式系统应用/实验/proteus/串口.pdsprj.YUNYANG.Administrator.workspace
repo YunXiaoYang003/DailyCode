@@ -5,6 +5,31 @@
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
-  <PWI/>
+  <PWI>
+   <POPUP w="800" x="48" flags="00000002" y="160" h="200" pid="0" iid="-1">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="350" x="68" flags="00000032" y="180" h="200" pid="1" iid="-1">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="24" x="88" flags="00000008" y="200" h="17" pid="1" iid="1">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="108" flags="0000000a" y="220" h="16" pid="3" iid="1">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="128" flags="0000000a" y="240" h="16" pid="2" iid="1">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="24" x="148" flags="00000008" y="260" h="17" pid="1" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="168" flags="0000000a" y="280" h="16" pid="3" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="188" flags="0000000a" y="300" h="16" pid="2" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+  </PWI>
  </MODULE>
 </WORKSPACE>

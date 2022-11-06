@@ -1,0 +1,5 @@
+".\obj\main.obj",
+".\obj\delay.obj",
+".\obj\uart.obj" 
+TO ".\obj\SERIAL" 
+PRINT(".\obj\SERIAL.m51") RAMSIZE(256) 

@@ -1,0 +1,152 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        03/25/2022  21:12:02  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+G:\KEIL C51\C51\BIN\BL51.EXE .\obj\外部中断0电平触发.obj, .\obj\delay.obj TO .\obj\外部中断0电平触发 PRINT (.\obj\外部中
+>> 断0电平触发.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\obj\外部中断0电平触发.obj (外部謃__0_缙絖_)
+  .\obj\delay.obj (DELAY)
+  G:\KEIL C51\C51\LIB\C51S.LIB (?C_STARTUP)
+  G:\KEIL C51\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\obj\外部中断0电平触发 (外部謃__0_缙絖_)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+                    000CH     0014H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?外部謃__0_缙絖_
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     000CH     UNIT         ?PR?MAIN?外部謃__0_缙絖_
+                    0012H     0001H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     008CH     UNIT         ?C_C51STARTUP
+            CODE    00A2H     005DH     UNIT         ?PR?EX0?外部謃__0_缙絖_
+            CODE    00FFH     005DH     UNIT         ?PR?EX1?外部謃__0_缙絖_
+            CODE    015CH     0015H     UNIT         ?PR?_DELAYMS?DELAY
+            CODE    0171H     0003H     UNIT         ?C_INITSEG
+            CODE    0174H     0003H     UNIT         ?PR?_DELAYUS2X?DELAY
+
+
+
+OVERLAY MAP OF MODULE:   .\obj\外部中断0电平触发 (外部謃__0_缙絖_)
+
+
+SEGMENT                              DATA_GROUP 
+  +--> CALLED SEGMENT              START    LENGTH
+--------------------------------------------------
+?PR?EX0?外部謃__0_缙絖_          0008H    0002H
+  +--> ?PR?_DELAYMS?DELAY
+
+?PR?_DELAYMS?DELAY                 -----    -----
+  +--> ?PR?_DELAYUS2X?DELAY
+
+*** NEW ROOT ***************************************************
+
+BL51 BANKED LINKER/LOCATER V5.03                                                      03/25/2022  21:12:02  PAGE 2
+
+
+?PR?EX1?外部謃__0_缙絖_          000AH    0002H
+  +--> ?PR?_DELAYMS?DELAY
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP                      -----    -----
+  +--> ?PR?MAIN?外部謃__0_缙絖_
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\obj\外部中断0电平触发 (外部謃__0_缙絖_)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        外部謃__0_缙絖_
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  B:00A8H.7       PUBLIC        EA
+  C:00A2H         PUBLIC        ex0
+  C:00FFH         PUBLIC        ex1
+  B:0020H.0       PUBLIC        flag
+  C:0006H         PUBLIC        main
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  B:0090H.1       PUBLIC        led1
+  B:0090H.6       PUBLIC        led2
+  -------         PROC          MAIN
+  C:0006H         LINE#         6
+  C:0006H         LINE#         7
+  C:0006H         LINE#         8
+  C:000CH         LINE#         9
+  C:0010H         LINE#         10
+  -------         ENDPROC       MAIN
+  -------         PROC          EX0
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:00A2H         LINE#         12
+  C:00BFH         LINE#         14
+  C:00C2H         LINE#         15
+  C:00E2H         LINE#         16
+  C:00E4H         LINE#         17
+  -------         ENDPROC       EX0
+  -------         PROC          EX1
+  -------         DO            
+  D:000AH         SYMBOL        j
+  -------         ENDDO         
+  C:00FFH         LINE#         18
+  C:011CH         LINE#         20
+  C:011FH         LINE#         21
+  C:013FH         LINE#         22
+  C:0141H         LINE#         23
+  -------         ENDPROC       EX1
+BL51 BANKED LINKER/LOCATER V5.03                                                      03/25/2022  21:12:02  PAGE 3
+
+
+  -------         ENDMOD        外部謃__0_缙絖_
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:015CH         PUBLIC        _DelayMs
+  C:0174H         PUBLIC        _DelayUs2x
+  -------         PROC          _DELAYUS2X
+  D:0007H         SYMBOL        t
+  C:0174H         LINE#         8
+  C:0174H         LINE#         9
+  C:0174H         LINE#         10
+  C:0176H         LINE#         11
+  -------         ENDPROC       _DELAYUS2X
+  -------         PROC          _DELAYMS
+  D:0006H         SYMBOL        t
+  C:015CH         LINE#         17
+  C:015EH         LINE#         18
+  C:015EH         LINE#         20
+  C:0164H         LINE#         21
+  C:0164H         LINE#         23
+  C:0169H         LINE#         24
+  C:016EH         LINE#         25
+  C:0170H         LINE#         26
+  -------         ENDPROC       _DELAYMS
+  -------         ENDMOD        DELAY
+
+Program Size: data=13.1 xdata=0 code=374
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

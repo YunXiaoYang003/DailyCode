@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   1602                                                              10/22/2022 15:23:16 PAGE 1   
+C51 COMPILER V9.60.0.0   1602                                                              11/06/2022 13:29:26 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE 1602
@@ -62,7 +62,7 @@ line level    source
   52   1       }
   53          /*------------------------------------------------
   54                        Ð´Èë×Ö·û´®º¯Êý
-C51 COMPILER V9.60.0.0   1602                                                              10/22/2022 15:23:16 PAGE 2   
+C51 COMPILER V9.60.0.0   1602                                                              11/06/2022 13:29:26 PAGE 2   
 
   55          ------------------------------------------------*/
   56           void LCD_Write_String(unsigned char x,unsigned char y,unsigned char *s) 

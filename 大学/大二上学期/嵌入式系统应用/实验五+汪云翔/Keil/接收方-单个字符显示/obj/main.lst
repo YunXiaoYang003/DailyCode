@@ -1,0 +1,60 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              11/06/2022 13:43:33 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\obj\main.obj
+COMPILER INVOKED BY: D:\soft\Keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\obj\main.l
+                    -st) OBJECT(.\obj\main.obj)
+
+line level    source
+
+   1                #include <reg52.h>
+   2                #include <1602.h>
+   3                int i=0;
+   4                //·¢ËÍ¿ÉÒÔ²»ÓÃÖÐ¶Ï£¬½ÓÊÕÒ»°ãÓÃÖÐ¶Ï
+   5                void uart_init()
+   6                { SCON=0x50;   //´®¿Ú·½Ê½1
+   7   1              TMOD=0X20;  TH1=0x1D; TL1=0x1D;  TR1=1; 
+   8   1              //137.5BPS£¬Èç¹û»»³É9600bps£¬ÔòlcdÏÔÊ¾»á³ö´í£¬Ô­Òò£º²¨ÌØÂÊÌ«¸ß£¬Ã¿Á½¸ö×Ö·ûÖ®¼äµÄ·¢ËÍ¼ä¸ô¶Ì£¬¶ølcdÏ
+             -ÔÊ¾º¯ÊýÐèÒªÒ»¶¨µÄÖ´ÐÐÊ±¼ä(´óÓÚ·¢ËÍ¼ä¸ô)£¬Ôì³É½ÓÊÕ·½Â©½Ó×Ö·û
+   9   1              ES=1; EA=1;  //´®¿ÚÖÐ¶Ï
+  10   1            }
+  11               main()
+  12               { //´®¿Ú³õÊ¼»¯
+  13   1             uart_init();
+  14   1             LCD_Init(); // LCD³õÊ¼»¯
+  15   1             while(1);   //µÈ´ý½ÓÊÕÊý¾Ý£¬ÔÙ°ÑÊý¾ÝÏÔÊ¾µ½lcd       
+  16   1             }
+  17               void serial() interrupt 4
+  18               {  
+  19   1                char rxdata[4];        
+  20   1                if(RI=1)
+*** WARNING C276 IN LINE 20 OF main.c: constant in condition expression
+  21   1                { 
+  22   2                  
+  23   2                  rxdata[i]=SBUF;
+  24   2                  LCD_Write_Char(i,0,rxdata[i]);
+  25   2                  i++;  
+  26   2                  RI=0; 
+  27   2                }  //½ÓÊÕÒ»¸ö×Ö·ûÏÔÊ¾Ò»¸ö×Ö·û
+  28   1                if(i==4)   
+  29   1                {i=0;}      
+  30   1           }
+  31          
+  32          
+  33               
+  34               
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    126    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
