@@ -24,15 +24,23 @@ typedef struct UserNode
 	struct UserNode* next;
 }User;
 
+//打印用户信息：
+void UserPrint(User* phead);
+
 //增加用户
 User* BuyUser(char telephone[11], char nickname[20], int sex, int age);//创建空间
 void UserPushFront(User** pphead, char telephone[11], char nickname[20], int sex, int age);//头插，添加新用户；
-void UserPrint(User* phead);
 
 //删除用户
 User* UserNumFind(User* phead, char telephone[12]);
 User* UserNameFind(User* phead, char nickname[20]);
 void UserPopFront(User** pphead);//头删
 void UserErase(User** pphead, User* pos);// 删除pos位置
+
+//查询用户：可根据用户号、性别、连续运动天数等进行查询。要求显示所有符合条件的信息。
+User* UserNumFind(User* phead, char telephone[12]);
+User* UserSexFind(User* phead, int sex);//0为女，1为男
+
+
 
 
