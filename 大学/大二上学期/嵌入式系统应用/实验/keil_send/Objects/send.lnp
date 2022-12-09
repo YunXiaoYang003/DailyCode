@@ -1,6 +1,0 @@
-".\Objects\STARTUP.obj",
-".\Objects\main.obj",
-".\Objects\uart.obj",
-".\Objects\delay.obj" 
-TO ".\Objects\send" 
-PRINT(".\Listings\send.m51")
