@@ -1,8 +1,26 @@
 #include "user.h"
+#include"move.h"
 #define _CRT_SECURE_NO_WARNINGS 1
 
+
+
+void UserPrint(User* phead)//¥Ú”°»´≤ø”√ªß–≈œ¢
+{
+	User* cur = phead;
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	while (cur != NULL)
+	{
+		printf("          %s,%s,%d,%d", cur->telephone, cur->nickname, cur->sex, cur->age);
+		cur = cur->next;
+		printf("\n");
+	}
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+
+
 //‘ˆº””√ªß
-User* BuyUser( char telephone[11], char nickname[20], int sex, int age)//¥¥Ω®ø’º‰
+User* BuyUser( char telephone[20], char nickname[20], int sex, int age)//¥¥Ω®ø’º‰
 {
 	User* newnode = (User*)malloc(sizeof(User));
 	if (newnode == NULL)
@@ -10,11 +28,11 @@ User* BuyUser( char telephone[11], char nickname[20], int sex, int age)//¥¥Ω®ø’º
 		perror("malloc fail");
 		exit(-1);
 	}
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 12; i++)
 	{
 		newnode->telephone[i] = telephone[i];
 	}
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 20; i++)
 	{
 		newnode->nickname[i] = nickname[i];
 	}
@@ -24,7 +42,7 @@ User* BuyUser( char telephone[11], char nickname[20], int sex, int age)//¥¥Ω®ø’º
 	return newnode;
 }
 
-void UserPushFront(User** pphead, char telephone[11], char nickname[20], int sex, int age)//Õ∑≤Â£¨ÃÌº”–¬”√ªß£ª
+void UserPushFront(User** pphead, char telephone[20], char nickname[20], int sex, int age)//Õ∑≤Â£¨ÃÌº”–¬”√ªß£ª
 {
 	assert(pphead);
 
@@ -33,34 +51,12 @@ void UserPushFront(User** pphead, char telephone[11], char nickname[20], int sex
 	*pphead = newnode;
 }
 
-void UserPrint(User* phead)//¥Ú”°”√ªß–≈œ¢
-{
-	User* cur = phead;
-	while (cur != NULL)
-	{
-		printf("%s,%s,%d,%d", cur->telephone, cur->nickname, cur->sex, cur->age);
-		cur = cur->next;
-		printf("\n");
-	}
-}
+
+
 
 
 //…æ≥˝”√ªß
-User* UserNumFind(User* phead,char telephone[12])//∞¥”√ªß√˚≤È—Ø
-{
-	User* cur = phead;
-	while (cur)
-	{
-		if (strcmp(cur->telephone,telephone)==0)
-			return cur;
-
-		cur = cur->next;
-	}
-
-	return NULL;
-}
-
-User* UserNameFind(User* phead, char nickname[20])//∞¥”√ªßÍ«≥∆≤È—Ø
+User* UserNumFind(User* phead, char telephone[12])//∞¥”√ªß√˚≤È—Ø
 {
 	User* cur = phead;
 	while (cur)
@@ -74,3 +70,82 @@ User* UserNameFind(User* phead, char nickname[20])//∞¥”√ªßÍ«≥∆≤È—Ø
 	return NULL;
 }
 
+User* UserNameFind(User* phead, char nickname[20])//∞¥”√ªßÍ«≥∆≤È—Ø
+{
+	User* cur = phead;
+	while (cur)
+	{
+		if (strcmp(cur->nickname, nickname) == 0)
+			return cur;
+
+		cur = cur->next;
+	}
+	return NULL;
+}
+
+void UserPopFront(User** pphead)//Õ∑…æ
+{
+	assert(pphead);
+
+	// Œ¬»·µƒºÏ≤È
+	if (*pphead == NULL)
+	{
+		return;
+	}
+
+	User* del = *pphead;
+	*pphead = (*pphead)->next;
+	free(del);
+	del = NULL;
+}
+
+void UserErase(User** pphead, User* pos)// …æ≥˝posŒª÷√
+{
+	assert(pphead);//∂œ—‘£¨∑¿÷πppheadŒ™ø’
+	assert(pos);//∂œ—‘£¨∑¿÷πposŒ™ø’
+
+	if (*pphead == pos)
+	{
+		UserPopFront(pphead);
+	}
+	else
+	{
+		User* prev = *pphead;
+		while (prev->next != pos)
+		{
+			prev = prev->next;
+
+			// ºÏ≤Èpos≤ª «¡¥±Ì÷–Ω⁄µ„£¨≤Œ ˝¥´¥Ì¡À
+			assert(prev);
+		}
+
+		prev->next = pos->next;
+		free(pos);
+		//pos = NULL;
+	}
+}
+
+//≤È—Ø”√ªß£∫ø…∏˘æ›”√ªß∫≈°¢–‘±°¢¡¨–¯‘À∂ØÃÏ ˝µ»Ω¯––≤È—Ø°£“™«Ûœ‘ æÀ˘”–∑˚∫œÃıº˛µƒ–≈œ¢°£
+User* UserSexFind(User* phead, int sex)//0Œ™≈Æ£¨1Œ™ƒ–
+{
+	User* cur = phead;
+	while (cur)
+	{
+		if (sex == cur->sex)
+			return cur;
+
+		cur = cur->next;
+	}
+	return NULL;
+}
+User* UserConDayFind(User* phead, int day)//¡¨–¯ÃÏ ˝
+{
+	User* cur = phead;
+	while (cur)
+	{
+		if (day == Con_Day(cur->move))
+			return cur;
+		cur = cur->next;
+	}
+	return NULL;
+}

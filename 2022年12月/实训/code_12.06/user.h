@@ -5,32 +5,48 @@
 #include<string.h>
 
 //运动信息
-typedef struct MoveNode
-{
-	int StepNum;//运动步数
-	int MoveDay;
-	int Con_Day;//连续天数
-	struct MoveNode* next;
-}Move;
+//typedef struct MoveNode
+//{
+//	int StepNum;//运动步数
+//	int MoveDay;
+//	int Con_Day;//连续天数
+//	struct MoveNode* next;
+//}Move;
 
 //用户信息
 typedef struct UserNode
 {
-	char telephone[12];
+	char telephone[20];
 	char nickname[20];
 	int sex;//0为女，1位男。
 	int age;
-	Move move;//嵌套一个结构体，将运动信息与用户连接一起
+	int move[7];
+	//Move move;//嵌套一个结构体，将运动信息与用户连接一起
 	struct UserNode* next;
 }User;
 
-//增加用户
-User* BuyUser(char telephone[11], char nickname[20], int sex, int age);//创建空间
-void UserPushFront(User** pphead, char telephone[11], char nickname[20], int sex, int age);//头插，添加新用户；
-void UserPrint(User* phead);
+//打印用户信息：
+void UserPrint(User* phead);//打印全部用户信息
+void PerUserPrint(User* phead);//打印用户信息
 
-//删除用户
-User* UserNumFind(User* phead, char telephone[12]);
-User* UserNameFind(User* phead, char nickname[20]);
+//增加用户
+User* BuyUser(char telephone[20], char nickname[20], int sex, int age);//创建空间
+void UserPushFront(User** pphead, char telephone[20], char nickname[20], int sex, int age);//头插，添加新用户；
+
+//删除用户:可根据用户号和昵称进行删除。删除之前先查询，找到后必须要有删除确认才可以完成删除操作。
+User* UserNumFind(User* phead, char telephone[12]);//用户号
+User* UserNameFind(User* phead, char nickname[20]);//昵称
+User* UserConDayFind(User* phead, int day);//连续天数
+void UserPopFront(User** pphead);//头删
+void UserErase(User** pphead, User* pos);// 删除pos位置
+
+
+
+
+//查询用户：可根据用户号、性别、连续运动天数等进行查询。要求显示所有符合条件的信息。
+User* UserSexFind(User* phead, int sex);//0为女，1为男
+User* UserCon_DayFind(User* phead, int day);//连续天数
+
+
 
 
