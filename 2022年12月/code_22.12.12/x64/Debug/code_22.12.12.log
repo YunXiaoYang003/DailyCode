@@ -1,0 +1,35 @@
+﻿  DataLoad.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\DataLoad.cpp(22,6): error C3861: “SearchUser_Byid”: 找不到标识符
+  main.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+  Menu.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+  RankingList.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\RankingList.cpp(12,19): warning C4101: “k”: 未引用的局部变量
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\RankingList.cpp(55,19): warning C4101: “k”: 未引用的局部变量
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\RankingList.cpp(108,19): warning C4101: “k”: 未引用的局部变量
+  route.cpp
+  SportsMng.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(13,2): error C3861: “PrintUser_week”: 找不到标识符
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(17,4): error C3861: “SearchUser_Byid”: 找不到标识符
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(36,4): error C3861: “PrintUser_week”: 找不到标识符
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(48,2): error C3861: “PrintUser_week”: 找不到标识符
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(53,4): error C3861: “SearchUser_Byid”: 找不到标识符
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SportsMng.cpp(67,4): error C3861: “PrintUser_week”: 找不到标识符
+  SqList.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+  Stack.cpp
+  UserMng.cpp
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\SqList.h(16,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
+E:\Code\Github\MyBlog\大学\大二实训\手机运动信息管理系统 - 框架\UserMng.cpp(36,17): warning C4101: “flag”: 未引用的局部变量
+  正在生成代码...
