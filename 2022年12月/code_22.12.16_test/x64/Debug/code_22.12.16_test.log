@@ -1,0 +1,8 @@
+﻿  2.cpp
+E:\Code\Github\DailyCode\2022年12月\code_22.12.16_test\1.h(1,1): warning C4828: 文件包含在偏移 0x1c4 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+E:\Code\Github\DailyCode\2022年12月\code_22.12.16_test\1.h(12,2): warning C4091: “typedef ”: 没有声明变量时忽略“AMGraph”的左侧
+  test3.cpp
+E:\Code\Github\DailyCode\2022年12月\code_22.12.16_test\1.h(1,1): warning C4828: 文件包含在偏移 0x1c4 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+E:\Code\Github\DailyCode\2022年12月\code_22.12.16_test\1.h(12,2): warning C4091: “typedef ”: 没有声明变量时忽略“AMGraph”的左侧
+  正在生成代码...
+  code_22.12.16_test.vcxproj -> E:\Code\Github\DailyCode\2022年12月\code_22.12.16_test\x64\Debug\code_22.12.16_test.exe

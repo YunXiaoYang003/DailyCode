@@ -1,0 +1,5 @@
+﻿  main.c
+E:\Code\Github\DailyCode\2022年12月\code_22.12.15\main.c(13,2): warning C4013: “printf”未定义；假设外部返回 int
+E:\Code\Github\DailyCode\2022年12月\code_22.12.15\main.c(14,2): warning C4013: “scanf”未定义；假设外部返回 int
+main.obj : error LNK2019: 无法解析的外部符号 scanf，函数 main 中引用了该符号
+E:\Code\Github\DailyCode\2022年12月\code_22.12.15\x64\Debug\code_22.12.15.exe : fatal error LNK1120: 1 个无法解析的外部命令

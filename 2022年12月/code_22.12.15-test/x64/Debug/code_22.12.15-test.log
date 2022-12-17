@@ -1,0 +1,4 @@
+﻿  test.c
+E:\Code\Github\DailyCode\2022年12月\code_22.12.15\test.c(90): warning C4172: 返回局部变量或临时变量的地址: r
+main.obj : error LNK2019: 无法解析的外部符号 scanf，函数 main 中引用了该符号
+E:\Code\Github\DailyCode\2022年12月\code_22.12.15-test\x64\Debug\code_22.12.15-test.exe : fatal error LNK1120: 1 个无法解析的外部命令
